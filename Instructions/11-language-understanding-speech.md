@@ -1,80 +1,85 @@
 ---
 lab:
-    title: 'Speech および Language Understanding サービスの使用'
-    module: 'モジュール 5 - Language Understanding ソリューションの作成'
+  title: Speech および Language Understanding サービスの使用
+  module: Module 5 - Creating Language Understanding Solutions
+ms.openlocfilehash: 31b88612bce38780f828859f8e2b166dbe8df34d
+ms.sourcegitcommit: d6da3bcb25d1cff0edacd759e75b7608a4694f03
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "137819351"
 ---
-
-# Speech および Language Understanding サービスの使用
+# <a name="use-the-speech-and-language-understanding-services"></a>Speech および Language Understanding サービスの使用
 
 音声サービスを Language Understanding サービスと統合して、音声入力からユーザーの意図をインテリジェントに判断できるアプリケーションを作成できます。
 
-> **注**: この演習は、マイクがあると適切に行うことができます。一部のホストされる仮想環境では、ローカル マイクから音声をキャプチャできる場合があります。しかし、これが機能しない場合 (または、マイクがない場合)、音声入力用に付属の音声ファイルを使用できます。マイクまたは音声ファイルを使用するかどうかに応じて、ことなるオプションを選択する必要があるろきは、慎重に手順に従ってください。
+> **注**: この演習は、マイクがあると適切に行うことができます。 一部のホストされる仮想環境では、ローカル マイクから音声をキャプチャできる場合があります。しかし、これが機能しない場合 (または、マイクがない場合)、音声入力用に付属の音声ファイルを使用できます。 マイクまたは音声ファイルを使用するかどうかに応じて、ことなるオプションを選択する必要があるろきは、慎重に手順に従ってください。
 
-## このコースのリポジトリを複製する
+## <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
 
-**AI-102-AIEngineer** コード リポジトリをこのラボで作業している環境に既に複製している場合は、Visual Studio Code で開きます。それ以外の場合は、次の手順に従って今すぐ複製してください。
+**AI-102-AIEngineer** コード リポジトリをこのラボの作業をしている環境に既にクローンしている場合は、Visual Studio Code で開きます。それ以外の場合は、次の手順に従って今すぐクローンしてください。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (SHIFT+CTRL+P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102JA-Designing-and-Implementing-a-Microsoft-Azure-AI-Solution` リポジトリをローカル フォルダーに複製します (どのフォルダーでもかまいません)。
+2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
-    > **注**: ビルドとデバッグに必要なアセットを追加するように求められた場合は、**「今はしない」** を選択します。
+    > **注**: ビルドとデバッグに必要なアセットを追加するように求めるプロンプトが表示された場合は、 **[今はしない]** を選択します。
 
-## Language Understanding リソースの作成
+## <a name="create-language-understanding-resources"></a>Language Understanding リソースの作成
 
-Azure サブスクリプションに Language Understanding オーサリングおよび予測リソースが既にある場合は、この演習でそれらを使用できます。それ以外の場合は、次の手順に従って作成してください。
+Azure サブスクリプションに Language Understanding オーサリングおよび予測リソースが既にある場合は、この演習でそれらを使用できます。 それ以外の場合は、次の手順に従って作成してください。
 
-1. `https://portal.azure.com` で Azure portal を開き、Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
-2. **&#65291;「リソースの作成」** ボタンを選択し、*Language Understanding* を検索して、次の設定で **Language Understanding** リソースを作成します。
-    - **作成オプション**: 両方
-    - **サブスクリプション**: *お使いの Azure サブスクリプション*
-    - **リソース グループ**: *リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がない可能性があります - 提供されているものを使用してください)*
-    - **名前**: *一意の名前を入力します*
-    - **オーサリングの場所**: *希望する場所を選択します*
-    - **オーサリングの価格レベル**: F0
-    - **予測の場所**: *オーサリング場所と<u>同じ場所</u>を選択します*
-    - **予測の価格レベル**: F0 (*F0が利用できない場合はS0を選択します*)
+1. Azure portal (`https://portal.azure.com`) を開き、ご利用の Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
+2. **[&#65291;リソースの作成]** ボタンを選択して、「*language understanding*」を検索し、次の設定を使用して **Language Understanding** リソースを作成します。
+    - **[Create option]\(作成オプション\)**: 両方
+    - **[サブスクリプション]**:"*ご自身の Azure サブスクリプション*"
+    - **リソース グループ**: *リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がないことがあります。提供されているものを使ってください)*
+    - **[名前]**: *一意の名前を入力します*
+    - **[作成場所]**: *希望の場所を選択します*
+    - **[価格レベルを作成しています]**: F0
+    - **[予測の場所]**: *作成場所と <u>同じ場所</u>を選択します*
+    - **予測価格レベル**: F0 (*F0 が使用できない場合は、S0 を選択*)
 
-3. リソースが作成されるのを待ち、2 つの Language Understanding リソースがプロビジョニングされることに注意してください。1 つはオーサリング用で、もう 1 つは予測用です。作成したリソース グループに移動すると、これらの両方を表示できます。
+3. リソースが作成されるまで待ちます。2 つの Language Understanding リソースがプロビジョニングされていることに注意してください。1 つは作成用、もう 1 つは予測用です。 作成先のリソース グループに移動すると、この両方を表示できます。
 
-## Language Understanding アプリを準備する
+## <a name="prepare-a-language-understanding-app"></a>Language Understanding アプリを準備する
 
-前の演習の**時計**アプリを既にお持ちの場合は、`https://www.luis.ai` の Language Understanding ポータルで開きます。それ以外の場合は、次の手順に従って作成してください。
+前の演習の **時計** アプリを既にお持ちの場合は、`https://www.luis.ai` の Language Understanding ポータルで開きます。 それ以外の場合は、次の手順に従って作成してください。
 
-1. 新しいブラウザタブで、`https://www.luis.ai` の Language Understanding ポータルを開きます。
-2. Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。Language Understanding ポータルに初めてサインインする場合は、アカウントの詳細にアクセスするためのアクセス許可をアプリに付与する必要がある場合があります。次に、Azure サブスクリプションと作成したオーサリングリ ソースを選択して、*ようこそ*手順を完了します。
-3. **「会話アプリ」** ページを開き、**「新しいアプリ」** の横にあるドロップダウン リストを表示して、**「LU としてインポート」** を選択します。
-この演習のラボ ファイルを含むプロジェクト フォルダー内の **11-luis-speech**サブフォルダーを参照し、**Clock.lu** を選択します。次に、時計アプリの一意の名前を指定します。
-4. 効果的な Language Understanding アプリを作成するためのヒントが記載されたパネルが表示されたら、それを閉じます。
+1. ブラウザーの新しいタブで、`https://www.luis.ai` の Language Understanding ポータルを開きます。
+2. Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。 初めて Language Understanding ポータルにサインインする場合は、アカウントの詳細にアクセスするために、アプリケーションにいくつかのアクセス許可を付与する必要が生じることがあります。 次に、Azure サブスクリプションと作成したオーサリング リソースを選択して、*ようこそ* の手順を完了します。
+3. **[会話アプリ]** ページを開き、 **[新しいアプリ]** の横にあるドロップダウン リストを表示して、 **[LU としてインポート]** を選択します。
+この演習のラボ ファイルを含むプロジェクト フォルダー内の **11-luis-speech** サブフォルダーを参照し、**Clock.lu** を選択します。 次に、時計アプリの一意の名前を指定します。
+4. 効果的な Language Understanding アプリを作成するためのヒントが表示されたパネルが表示された場合、そのパネルを閉じます。
 
-## *音声プライミング*でアプリをトレーニングして公開する
+## <a name="train-and-publish-the-app-with-speech-priming"></a>*音声プライミング* でアプリをトレーニングして公開する
 
-1. アプリがまだトレーニングされていない場合は、Language Understanding ポータルの上部にある **「トレーニング」** を選択して、アプリをトレーニングします。
-2. Language Understanding ポータルの右上にある **「公開」** を選択します。次に、**「本番スロット」** を選択し、設定を変更して**音声プライミング**を有効にします (これにより、音声認識のパフォーマンスが向上します)。
-3. 公開が完了したら、Language Understanding ポータルの上部にある **「管理」** を選択します。
-4. **「設定」** ページで、**アプリ ID** をメモします。クライアント アプリケーションがアプリを使用するには、これが必要です。
-5. **「Azure リソース」** ページの **「予測リソース」** で、予測リソースがリストされていない場合は、Azure サブスクリプションに予測リソースを追加します。
-6. 予測リソースの**プライマリ キー**、**セカンダリ キー**、および**場所L** (エンドポイントでは<u>ありません</u>) に注意してください。Speech SDK クライアント アプリケーションは、予測リソースに接続して認証されるために、場所とキーの 1 つを必要とします。
+1. アプリがまだトレーニングされていない場合は、Language Understanding ポータルの上部にある **[トレーニング]** を選択して、アプリをトレーニングします。
+2. Language Understanding ポータルの右上にある **[公開]** を選択します。 次に、 **[本番スロット]** を選択し、設定を変更して **音声プライミング** を有効にします (これにより、音声認識のパフォーマンスが向上します)。
+3. 公開が完了したら、Language Understanding ポータルの上部にある **[管理]** を選択します。
+4. **[設定]** ページで、**アプリ ID** をメモします。 クライアント アプリケーションがアプリを使用するには、これが必要です。
+5. **[Azure リソース]** ページの **[予測リソース]** で、予測リソースがリストされていない場合は、Azure サブスクリプションに予測リソースを追加します。
+6. 予測リソースの **プライマリ キー**、**セカンダリ キー**、および **場所** (エンドポイントでは<u>ありません</u>) に注意してください。 Speech SDK クライアント アプリケーションは、予測リソースに接続して認証されるために、場所とキーの 1 つを必要とします。
 
-## Language Understanding 用クライアント アプリケーションを構成する
+## <a name="configure-a-client-application-for-language-understanding"></a>Language Understanding 用クライアント アプリケーションを構成する
 
 この演習では、音声入力を受け入れ、Language Understanding アプリを使用して、ユーザーに意図を予測するクライアント アプリケーションを作成します。
 
-> **注**: この演習では、**C#** または **Python** 用の SDK のいずれかに使用することを選択できます。以下の手順で、希望する言語に適したアクションを実行します。
+> **注**: この演習では、**C#** または **Python** 用の SDK のいずれかに使用することを選択できます。 以下の手順で、希望する言語に適したアクションを実行します。
 
-1. Visual Studio Code の**エクスプローラー** ペインで、**11-luis-speech** フォルダーを参照し、言語の設定に応じて **C-Sharp** または **Python** フォルダーを展開します。
+1. Visual Studio Code の **エクスプローラー** ペインで、**11-luis-speech** フォルダーを参照し、言語の設定に応じて **C-Sharp** または **Python** フォルダーを展開します。
 2. **speaking-clock-client** フォルダーの内容を表示し、構成設定用のファイルが含まれていることに注意してください。
-    - **C#**: appsettings.json
+    - **C#** : appsettings.json
     - **Python**: .env
 
-    構成ファイルを開き、含まれている構成値を更新して、Language Understanding アプリの**アプリ ID** を含めます。**場所** (完全なエンドポイントでは<u>ありません</u> - たとえば、*eastus*) とその予測リソースの**キー**の 1 つ (Language Understanding ポータルのアプリの **「管理」** ページから)。
+    構成ファイルを開き、含まれている構成値を更新して、Language Understanding アプリの **アプリ ID** を含めます。**場所** (完全なエンドポイントでは <u>ありません</u> - たとえば、*eastus*) とその予測リソースの **キー** の 1 つ (Language Understanding ポータルのアプリの **[管理]** ページから)。
 
-## SDK パッケージのインストール
+## <a name="install-sdk-packages"></a>SDK パッケージをインストールする
 
 Speech SDK を Language Understanding と共に使用するには、使用するプログラム言語用の Speech SDK を印刷インストールする必要があります。
 
-1. Visual Studio で、**speaking-clock-client** フォルダーを右クリックして、統合ターミナルを開きます。次に、言語設定に適したコマンドを実行して、Language Understanding SDK パッケージをインストールします
+1. Visual Studio で、**speaking-clock-client** フォルダーを右クリックして、統合ターミナルを開きます。 次に、言語設定に適したコマンドを実行して、Language Understanding SDK パッケージをインストールします
 
     **C#**
 
@@ -88,7 +93,7 @@ Speech SDK を Language Understanding と共に使用するには、使用する
     pip install azure-cognitiveservices-speech==1.14.0
     ```
 
-2. また、システムに動作するマイクが<u>ない</u>場合は、アプリケーションに音声入力を提供するために、音声ファイルを使用する必要があります。この場合は、次のコマンドを使用して、プログラムが音声ファイルを再生できるように、次のパッケージをインストールします (マイクを使用する場合は、これをスキップできます)。
+2. また、システムに動作するマイクが<u>ない</u>場合は、アプリケーションに音声入力を提供するために、音声ファイルを使用する必要があります。 この場合は、次のコマンドを使用して、プログラムが音声ファイルを再生できるように、次のパッケージをインストールします (マイクを使用する場合は、これをスキップできます)。
 
     **C#**
 
@@ -104,10 +109,10 @@ Speech SDK を Language Understanding と共に使用するには、使用する
 
 3. **speaking-clock-client** フォルダーには、クライアント アプリケーションのコード ファイルが含まれていることに注意してください。
 
-    - **C#**: Program.cs
+    - **C#** : Program.cs
     - **Python**: speaking-clock-client.py
 
-4. コード ファイルを開き、上部の既存の名前空間参照の下で、**「名前空間のインポート」** というコメントを見つけます。次に、このコメントの下に、次の言語固有のコードを追加して、Speech SDK を使用するために必要な名前空間インポートします。
+4. コード ファイルを開き、上部の既存の名前空間参照の下で、「**Import namespaces**」というコメントを見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Speech SDK を使用するために必要な名前空間インポートします。
 
     **C#**
 
@@ -139,13 +144,13 @@ Speech SDK を Language Understanding と共に使用するには、使用する
     from playsound import playsound
     ```
 
-## *IntentRecognizer* を作成する
+## <a name="create-an-intentrecognizer"></a>*IntentRecognizer* を作成する
 
-**IntentRecognizer** クラスは、音声入力からLanguage Understanding 予測を取得するために使用できるクライアント オブジェクトを提供します。
+**IntentRecognizer** クラスは、音声入力から Language Understanding 予測を取得するために使用できるクライアント オブジェクトを提供します。
 
-1. **Main** 関数では、構成ファイルからアプリ ID、予測リージョン、およびキーを読み込むためのコードが既に提供されていることに注意してください。次にコメント「**Configure speech service and get intent recognizer**」を見つけ、音声入力にマイクまたは音声ファイルを使用するかに応じて、次のコードを追加します。
+1. **Main** 関数では、構成ファイルからアプリ ID、予測リージョン、およびキーを読み込むためのコードが既に提供されていることに注意してください。 次にコメント「**Configure speech service and get intent recognizer**」を見つけ、音声入力にマイクまたは音声ファイルを使用するかに応じて、次のコードを追加します。
 
-    ### **機能するマイクがある場合:**
+    ### <a name="if-you-have-a-working-microphone"></a>**機能するマイクがある場合:**
 
     **C#**
 
@@ -165,7 +170,7 @@ Speech SDK を Language Understanding と共に使用するには、使用する
     recognizer = speech_sdk.intent.IntentRecognizer(speech_config, audio_config)
     ```
 
-    ### **音声ファイルを使用する場合:**
+    ### <a name="if-you-need-to-use-an-audio-file"></a>**音声ファイルを使用する場合:**
 
     **C#**
 
@@ -191,11 +196,11 @@ Speech SDK を Language Understanding と共に使用するには、使用する
     recognizer = speech_sdk.intent.IntentRecognizer(speech_config, audio_config)
     ```
 
-## 音声入力から予測意図を取得する
+## <a name="get-a-predicted-intent-from-spoken-input"></a>音声入力から予測意図を取得する
 
 音声入力から予測意図を取得するコードを実装する準備が整いました。
 
-1. 追加したコードのすぐ下に、コメント **「Get the model from the AppID and add the intents we want to use」** を見つけ、使用する意図を追加し、次のコードを追加して、(アプリ ID に基づいて) Language Understanding モデルを取得し、認識機能に識別させたい意図を指定します。
+1. **Main** 関数の追加したコードのすぐ下に、コメント **「Get the model from the AppID and add the intents we want to use」** を見つけ、使用する意図を追加し、次のコードを追加して、(アプリ ID に基づいて) Language Understanding モデルを取得し、認識機能に識別させたい意図を指定します。
 
     **C#**
 
@@ -208,7 +213,7 @@ Speech SDK を Language Understanding と共に使用するには、使用する
     recognizer.AddIntent(model, "None", "none");
     ```
 
-    *各インテントに文字列ベースのIDを指定できることに注意してくださいを*
+    *各意図に文字列ベースの ID を指定できることに注意してください*
 
     **Python**
 
@@ -224,7 +229,7 @@ Speech SDK を Language Understanding と共に使用するには、使用する
     recognizer.add_intents(intents)
     ```
 
-2. このループ内で、コメント **「Process speech input」** を見つけ、次のコードを追加します。このコードは、レコグナイザーを使用して、音声入力を使用して Language Understanding サービスを非同期的に呼び出し、応答を取得します。応答に予測された意図が含まれている場合、音声クエリ、予測された意図、および完全な JSON 応答が表示されます。それ以外の場合、コードは返された理由に基づいて応答を処理します。
+2. このループ内で、コメント **「Process speech input」** を見つけ、次のコードを追加します。このコードは、レコグナイザーを使用して、音声入力を使用して Language Understanding サービスを非同期的に呼び出し、応答を取得します。 応答に予測された意図が含まれている場合、音声クエリ、予測された意図、および完全な JSON 応答が表示されます。 それ以外の場合、コードは返された理由に基づいて応答を処理します。
 
 **C#**
 
@@ -301,7 +306,7 @@ elif result.reason == speech_sdk.ResultReason.Canceled:
         print("Error details: {}".format(result.cancellation_details.error_details))
 ```
 
-これまでに追加したコードは*意図*を識別しますが、一部の意図は*エンティティ*を参照できるため、サービスから返される JSON からエンティティ情報を抽出するコードを追加する必要があります。
+これまでに追加したコードは *意図* を識別しますが、一部の意図は *エンティティ* を参照できるため、サービスから返される JSON からエンティティ情報を抽出するコードを追加する必要があります。
 
 3. 追加したコードで、コメント **「Get the first entity (if any)」** を見つけ、その下に次のコードを追加します。
 
@@ -333,9 +338,9 @@ if len(json_response["entities"]) > 0:
     print(entity_type + ': ' + entity_value)
 ```
     
-コードは、言語理解アプリを使用して、入力発話で検出されたエンティティだけでなく、インテントも予測するようになりました。クライアント アプリケーションは、その予測を使用して適切なアクションを決定および実行する必要があります。
+コードは、言語理解アプリを使用して、入力発話で検出されたエンティティだけでなく、インテントも予測するようになりました。 クライアント アプリケーションは、その予測を使用して適切なアクションを決定および実行する必要があります。
 
-4. 追加したコードの下に、**「Apply the appropriate action」** というコメントを見つけ、次のコードを追加します。このコードは、アプリケーションでサポートされている意図 (**GetTime**、**GetDate**、および **GetDay**) をチェックし、適切な応答を生成するために既存の関数を呼び出す前に、関連するエンティティが検出されたかどうかを判断します。
+4. 追加したコードの下に、 **「Apply the appropriate action」** というコメントを見つけ、次のコードを追加します。このコードは、アプリケーションでサポートされている意図 (**GetTime**、**GetDate**、および **GetDay**) をチェックし、適切な応答を生成するために既存の関数を呼び出す前に、関連するエンティティが検出されたかどうかを判断します。
 
 **C#**
 
@@ -432,7 +437,7 @@ else:
         print('Try asking me for the time, the day, or the date.')
 ```
 
-## クライアント アプリケーションを実行する
+## <a name="run-the-client-application"></a>クライアント アプリケーションを実行する
 
 1. 変更を保存し、**speaking-clock-client** フォルダーの統合ターミナルに戻り、次のコマンドを入力してプログラムを実行します。
 
@@ -448,11 +453,11 @@ else:
     python speaking-clock-client.py
     ```
 
-2. マイクを使用している場合、アプリケーションをテストするために声を出して発言を話します。たとえば、次のことを試してください (毎回、プログラムを再実行します)。
+2. マイクを使用している場合、アプリケーションをテストするために声を出して発言を話します。 たとえば、次のことを試してください (毎回、プログラムを再実行します)。
 
     *What's the time?*
     
-    *What time is it?*
+    *今何時?*
 
     *What day is it?*
 
@@ -462,8 +467,8 @@ else:
 
     *What date is Sunday?*
 
-> **注**: アプリケーションのロジックは意図的に単純であり、いくつかの制限がありますが、Speech SDK を使用して音声入力から意図を予測する言語理解モデルの機能をテストする目的に役立つはずです。*MM/DD/YYYY* 形式で日付を言語化するのが難しいため、特定の日付エンティティで **GetDay** 意図を認識できない場合があります。
+> **注**: アプリケーションのロジックは意図的に単純であり、いくつかの制限がありますが、Speech SDK を使用して音声入力から意図を予測する Language Understanding モデルの機能をテストする目的に役立つはずです。 *MM/DD/YYYY* 形式で日付を言語化するのが難しいため、特定の日付エンティティで **GetDay** 意図を認識できない場合があります。
 
-## 詳細
+## <a name="more-information"></a>詳細情報
 
 音声と Language Understanding の統合の詳細については、[音声のドキュメント](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstarts/intent-recognition)を参照してください。
