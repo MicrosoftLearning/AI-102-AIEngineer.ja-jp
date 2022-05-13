@@ -2,12 +2,12 @@
 lab:
   title: Cognitive Services コンテナーの使用
   module: Module 2 - Developing AI Apps with Cognitive Services
-ms.openlocfilehash: 3c9e51562e4fb93809855e3ae8707d6aeaf83c97
-ms.sourcegitcommit: e9fc70625e09e4f4585a08e1668597f5d82616a0
+ms.openlocfilehash: 244ab1ef3754e668d64996dece9711682651691d
+ms.sourcegitcommit: 29a684646784fe4f7370343b6c005728a953770d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "141605465"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "144557842"
 ---
 # <a name="use-a-cognitive-services-container"></a>Cognitive Services コンテナーの使用
 
@@ -20,11 +20,11 @@ Cognitive Services API の多くは、"*コンテナー*" にパッケージ化�
 **AI-102-AIEngineer** コード リポジトリをこのラボの作業をしている環境に既にクローンしている場合は、Visual Studio Code で開きます。それ以外の場合は、次の手順に従って今すぐクローンしてください。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
+2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
-    > **注**: ビルドとデバッグに必要なアセットを追加するように求めるダイアログが表示された場合は、 **[今はしない]** を選択します。
+    > **注**:ビルドとデバッグに必要なアセットを追加するように求められた場合は、 **[今はしない]** を選択します。
 
 ## <a name="provision-a-cognitive-services-resource"></a>Cognitive Services リソースをプロビジョニングする
 
@@ -33,7 +33,7 @@ Cognitive Services API の多くは、"*コンテナー*" にパッケージ化�
 1. Azure portal (`https://portal.azure.com`) を開き、ご利用の Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
 2. **[&#65291;リソースの作成]** ボタンを選択し、*Cognitive Services* を検索して、次の設定で **Cognitive Services** リソースを作成します。
     - **[サブスクリプション]**:"*ご自身の Azure サブスクリプション*"
-    - **リソース グループ**: "*リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がないことがあります。提供されているものを使ってください)* "
+    - **[リソース グループ]** : "*リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がない可能性があります - 提供されているものを使用してください)* "
     - **[リージョン]**: 使用できるリージョンを選択します
     - **[名前]**: *一意の名前を入力します*
     - **価格レベル**: Standard S0
@@ -52,7 +52,8 @@ Cognitive Services API の多くは、"*コンテナー*" にパッケージ化�
         - **リソース グループ**: "*Cognitive Services リソースを含むリソース グループを選択します*"
         - **コンピューティング名**: "*一意の名前を入力します*"
         - **[リージョン]**: 使用できるリージョンを選択します
-        - **イメージのソース**: Docker Hub またはその他のレジストリ
+        - **イメージのソース**:その他のレジストリ
+        - **イメージの種類**: パブリック
         - **イメージ**: `mcr.microsoft.com/azure-cognitive-services/textanalytics/language:1.1.013570001-amd64`
         - **OS の種類**: Linux
         - **サイズ**: 1 vCPU、4 GB メモリ
