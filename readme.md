@@ -13,11 +13,11 @@ ms.locfileid: "137819532"
 - **あなたは MCT ですか?** - [MCT 向けの GitHub ユーザー ガイド](https://microsoftlearning.github.io/MCT-User-Guide/)をご覧ください
 - **ラボの手順を手動で作成する必要がありますか?** - 手順は、[MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) リポジトリで確認できます
 
-## <a name="what-are-we-doing"></a>説明
+## <a name="what-are-we-doing"></a>ここでの内容
 
 - このコースをサポートするには、コースで使用される Azure サービスを最新の状態に保つために、コース コンテンツを頻繁に更新する必要があります。  ラボの手順とラボ ファイルは GitHub で公開しています。これにより、コースの作成者と MCT 間でのオープンな作業が可能となり、Azure プラットフォームの変更に合わせてコンテンツを最新の状態に保つことができます。
 
-- これにより、これまでになかったようなコラボレーションの効果をラボで実現することができます。Azure が変更され、ライブ配信中に最初に変更箇所に気付いた場合は、ラボ ソースですぐに改善を図ってください。  仲間の MCT を支援しましょう。
+- これにより、今まで経験したことがないようなコラボレーション感がラボに生まれると期待しています。Azure が変更され、ライブ配信中にあなたがそれを最初に見つけた場合は、ラボ ソースで機能強化を行ってください。  仲間の MCT を支援しましょう。
 
 ## <a name="how-should-i-use-these-files-relative-to-the-released-moc-files"></a>公開済みの MOC ファイルと一緒にこれらのファイルを使用する方法
 
