@@ -30,10 +30,10 @@ Bot Framework SDK を使用してボットを作成し、Bot Framework Emulator 
 
 ### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
 
-このラボで作業している環境に **AI-102-AIEngineer** コードのリポジトリをまだ複製していない場合は、次の手順に従って複製します。 それ以外の場合は、複製されたフォルダーを Visual Studio Code で開きます。
+このラボで作業している環境に **AI-102-AIEngineer** コードのリポジトリをまだクローンしていない場合は、次の手順に従ってクローンします。 それ以外の場合は、複製されたフォルダーを Visual Studio Code で開きます。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
+2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
@@ -115,7 +115,7 @@ python app.py
 
     `http://localhost:3978/api/messages`
 
-3. 会話が **[ライブ チャット]** ペインで開かれた後、「*Hello and welcome!* 」というメッセージを待ちます。
+3. 会話が **[ライブ チャット]** ペインで開かれた後、「*Hello and welcome!*」というメッセージを待ちます。
 4. 「*Hello*」などのメッセージを入力し、ボットからの応答を表示します。これにより、入力したメッセージがエコー バックされます。
 5. Bot Framework Emulator を閉じて Visual Studio Code に戻り、ターミナル ウィンドウで **CTRL + C** を入力してボットを停止します。
 
@@ -193,9 +193,9 @@ python app.py
 
     `http://localhost:3978/api/messages`
 
-6. 会話が **[ライブ チャット]** ペインで開かれた後、「*Hello and welcome!* 」というメッセージを待ちます。
+6. 会話が **[ライブ チャット]** ペインで開かれた後、「*Hello and welcome!*」というメッセージを待ちます。
 7. 「*Hello*」などのメッセージを入力し、ボットからの応答を表示します。これは、*Ask me what the time is* \(何時か尋ねてください\) である必要があります。
-8. 「*What is the time?* 」\(何時ですか?\) と入力し、応答を表示します。
+8. 「*What is the time?*」\(何時ですか?\) と入力し、応答を表示します。
 
     これで、ボットは実行されているローカル時刻を表示して、"What is the time?" というクエリに応答します。 その他のクエリの場合は、ユーザーに時刻を尋ねるように求めます。 これは非常に限定されたボットであり、言語理解サービスと追加のカスタムコードとの統合によって改善される可能性がありますが、テンプレートから作成されたボットを拡張することで Bot Framework SDK を使用してソリューションを構築する方法の実用的な例として機能します。
 
