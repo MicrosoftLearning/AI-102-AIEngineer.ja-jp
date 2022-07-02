@@ -18,7 +18,7 @@ Azure Cognitive Service for Language モデルの Conversational Language Unders
 
 1. Visual Studio Code を起動します。
 
-2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
+2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
 
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 
@@ -156,7 +156,7 @@ Azure Cognitive Service for Language モデルの Conversational Language Unders
         ls_prediction_endpoint, AzureKeyCredential(ls_prediction_key))
     ```
 
-2. ユーザーが「quit」と入力するまで、**Main** 関数のコードはユーザー入力を求めるプロンプトを表示することにご注意ください。 このループ内で、コメント "**Call the Language service model to get intent and entities**" を見つけて、次のコードを追加します。
+2. ユーザーが "quit" と入力するまで、**Main** 関数のコードはユーザー入力を求めるプロンプトを表示することにご注意ください。 このループ内で、コメント "**Call the Language service model to get intent and entities**" を見つけて、次のコードを追加します。
 
     **C#**
 
