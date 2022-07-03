@@ -2,12 +2,12 @@
 lab:
   title: Cognitive Services の概要
   module: Module 2 - Developing AI Apps with Cognitive Services
-ms.openlocfilehash: 4baba38b03c6d7bb5fe04fa5e73bb606e970550b
-ms.sourcegitcommit: acbffd6019fe2f1a6ea70870cf7411025c156ef8
+ms.openlocfilehash: a05256a78dee051041320aa3556a43add5596ce9
+ms.sourcegitcommit: 5ffc20f6a590fe643c2b695b8dc04589411be36e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "137819563"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145951192"
 ---
 # <a name="get-started-with-cognitive-services"></a>Cognitive Services の概要
 
@@ -18,7 +18,7 @@ ms.locfileid: "137819563"
 このラボで作業している環境に **AI-102-AIEngineer** コードのリポジトリをまだクローンしていない場合は、次の手順に従ってクローンします。 それ以外の場合は、複製されたフォルダーを Visual Studio Code で開きます。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
+2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
@@ -31,7 +31,7 @@ Azure Cognitive Services は、アプリケーションに組み込むことが�
 1. Azure portal (`https://portal.azure.com`) を開き、ご利用の Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
 2. **[&#65291;リソースの作成]** ボタンを選択し、*Cognitive Services* を検索して、次の設定で **Cognitive Services** リソースを作成します。
     - **[サブスクリプション]**:"*ご自身の Azure サブスクリプション*"
-    - **リソース グループ**: "*リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がないことがあります。提供されているものを使ってください)* "
+    - **[リソース グループ]** : "*リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がない可能性があります - 提供されているものを使用してください)* "
     - **[リージョン]**: 使用できるリージョンを選択します
     - **[名前]**: *一意の名前を入力します*
     - **価格レベル**: Standard S0
@@ -54,7 +54,7 @@ Cognitive Services API は REST ベースであるため、HTTP 経由で JSON �
     - **Python**: .env
 
     構成ファイルを開き、含まれている構成値を更新して、Cognitive Services リソースの **エンドポイント** と認証 **キー** を反映します。 変更を保存します。
-4. **rest-client** フォルダーには、クライアント アプリケーションのコード ファイルが含まれていることにご注意ください。
+3. **rest-client** フォルダーには、クライアント アプリケーションのコード ファイルが含まれていることにご注意ください。
 
     - **C#** : Program.cs
     - **Python**: rest-client.py
@@ -66,7 +66,7 @@ Cognitive Services API は REST ベースであるため、HTTP 経由で JSON �
     - API に送信される要求は、入力データを含む JSON オブジェクトで構成されます。この場合、**ドキュメント** オブジェクトのコレクションであり、それぞれに **ID** と **テキスト** があります。
     - サービスのキーは、クライアント アプリケーションを認証するためのリクエスト ヘッダーに含まれています。
     - サービスからの応答は JSON オブジェクトであり、クライアント アプリケーションはこれを解析できます。
-5. **rest-client** フォルダーを右クリックして、統合ターミナルを開きます。 次に、次の言語固有のコマンドを入力して、プログラムを実行します。
+4. **rest-client** フォルダーを右クリックして、統合ターミナルを開きます。 次に、次の言語固有のコマンドを入力して、プログラムを実行します。
 
     **C#**
 
@@ -80,8 +80,8 @@ Cognitive Services API は REST ベースであるため、HTTP 経由で JSON �
     python rest-client.py
     ```
 
-6. プロンプトが表示されたら、テキストを入力し、サービスによって検出された言語を確認します。これは、JSON 応答で返されます。 たとえば、「Hello」、「Bonjour」、「Hola」と入力してみてください。
-7. アプリケーションのテストが終了したら、「quit」と入力してプログラムを終了します。
+5. プロンプトが表示されたら、テキストを入力し、サービスによって検出された言語を確認します。これは、JSON 応答で返されます。 たとえば、「Hello」、「Bonjour」、「Gracias」と入力してみてください。
+6. アプリケーションのテストが終了したら、「quit」と入力してプログラムを終了します。
 
 ## <a name="use-an-sdk"></a>SDK を使用する
 

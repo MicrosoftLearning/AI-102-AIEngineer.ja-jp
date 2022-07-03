@@ -2,12 +2,12 @@
 lab:
   title: Cognitive Services セキュリティの管理
   module: Module 2 - Developing AI Apps with Cognitive Services
-ms.openlocfilehash: dcab47cf20f54d6bcbed9a3e40081b703fc2d5ba
-ms.sourcegitcommit: acbffd6019fe2f1a6ea70870cf7411025c156ef8
+ms.openlocfilehash: 9c8de44265ffa0846b6860fd7d416bb3be547ed9
+ms.sourcegitcommit: 5ffc20f6a590fe643c2b695b8dc04589411be36e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "137819508"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145951184"
 ---
 # <a name="manage-cognitive-services-security"></a>Cognitive Services セキュリティの管理
 
@@ -20,7 +20,7 @@ Cognitive Services へのアクセスは通常、認証キーを介して制御�
 **AI-102-AIEngineer** コード リポジトリをこのラボの作業をしている環境に既にクローンしている場合は、Visual Studio Code で開きます。それ以外の場合は、次の手順に従って今すぐクローンしてください。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
+2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
@@ -33,7 +33,7 @@ Cognitive Services へのアクセスは通常、認証キーを介して制御�
 1. Azure portal (`https://portal.azure.com`) を開き、ご利用の Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
 2. **[&#65291;リソースの作成]** ボタンを選択し、*Cognitive Services* を検索して、次の設定で **Cognitive Services** リソースを作成します。
     - **[サブスクリプション]**:"*ご自身の Azure サブスクリプション*"
-    - **リソース グループ**: *リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がないことがあります。提供されているものを使ってください)*
+    - **[リソース グループ]** : "*リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がない可能性があります - 提供されているものを使用してください)* "
     - **[リージョン]**: 使用できるリージョンを選択します
     - **[名前]**: *一意の名前を入力します*
     - **価格レベル**: Standard S0
@@ -228,7 +228,7 @@ Key Vault 内のシークレットにアクセスするには、アプリケー�
     python keyvault-client.py
     ```
 
-6. プロンプトが表示されたら、テキストを入力し、サービスによって検出された言語を確認します。 たとえば、「Hello」、「Bonjour」、「Hola」と入力してみてください。
+6. プロンプトが表示されたら、テキストを入力し、サービスによって検出された言語を確認します。 たとえば、「Hello」、「Bonjour」、「Gracias」と入力してみてください。
 7. アプリケーションのテストが終了したら、「quit」と入力してプログラムを終了します。
 
 ## <a name="more-information"></a>詳細情報

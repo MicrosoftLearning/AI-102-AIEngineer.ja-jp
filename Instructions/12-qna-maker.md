@@ -2,12 +2,12 @@
 lab:
   title: 質問応答ソリューションを作成する
   module: Module 6 - Building a QnA Solution
-ms.openlocfilehash: 3fa849480f4b6f94aea758159de126aeb8bfb513
-ms.sourcegitcommit: 47e8de0c2ea379aac8bec96b7c599ffb74d1eee9
+ms.openlocfilehash: 0a71dc2c0185c51d8ccf390afd780dd914366be0
+ms.sourcegitcommit: 45e075a4b45a914d378900b4c00451a530d813de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2022
-ms.locfileid: "139132297"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "145892514"
 ---
 # <a name="create-a-question-answering-solution"></a>質問応答ソリューションを作成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "139132297"
 
 このラボで作業している環境に **AI-102-AIEngineer** コードのリポジトリをまだクローンしていない場合は、次の手順に従ってクローンします。 それ以外の場合は、複製されたフォルダーを Visual Studio Code で開きます。
 
-1. Visual Studio Code を開始する。
+1. Visual Studio Code を起動します。
 2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
@@ -56,8 +56,8 @@ ms.locfileid: "139132297"
 
 1. 新しいブラウザー タブで *Language Studio* ポータル (`https://language.azure.com`) に移動し、ご利用の Azure サブスクリプションに関連付けられている Microsoft アカウントを使ってサインインします。
 2. 言語リソースの選択を求めるメッセージが表示されたら、次の設定を選択します。
-    - **Azure ディレクトリ**: お使いのサブスクリプションを含む Azure ディレクトリ。
-    - **Azure サブスクリプション**: お使いの Azure サブスクリプション。
+    - **Azure ディレクトリ**: お使いのサブスクリプションを含む Azure ディレクトリ
+    - **Azure サブスクリプション**: お使いの Azure サブスクリプション
     - **言語リソース**: 先ほど作成した言語リソース。
 3. 言語リソースの選択を求めるメッセージが表示<u>されない</u>場合、原因として、お使いのサブスクリプションに複数の言語リソースが存在していることが考えられます。その場合は、次の操作を行います。
     1. ページの上部にあるバーで、**[設定] (&#9881;)** ボタンをクリックします。
@@ -65,7 +65,7 @@ ms.locfileid: "139132297"
     3. 作成したばかりの言語リソースを選択し、**[リソースの切り替え]** をクリックします。
     4. ページの上部で、**[Language Studio]** をクリックして、Language Studio のホーム ページに戻ります。
 3. ポータルの上部にある **[新規作成]** メニューで、 **[カスタム質問応答]** を選択します。
-4. ***プロジェクトの作成** ウィザードの **[Choose language setting]\(言語設定の選択\)** ページで、このリソース内のすべてのプロジェクトの言語を設定するオプションを選択し、言語として **[英語]** を選択します。 **[次へ]** をクリックします。
+4. ***プロジェクトの作成** ウィザードの **[Choose language setting]\(言語設定の選択\)** ページで、このリソース内のすべてのプロジェクトの言語を設定するオプションを選択し、言語として **[英語]** を選択します。 続けて、 **[次へ]** をクリックします。
 5. **[基本情報の入力]** ページで、次の詳細を入力したら、 **[次へ]** をクリックします。
     - **名前** LearnFAQ
     - **[説明]** : Microsoft Learn のよくあるご質問
@@ -85,11 +85,11 @@ ms.locfileid: "139132297"
 
 ナレッジ ベースには、Microsoft Learn FAQ の質問と回答のペアが入力されており、会話型 *chit-chat* の質問と回答のペアが追加されています。 質問と回答のペアを追加することで、ナレッジ ベースを拡張できます。
 
-1. Language Studio の **LearnFAQ** プロジェクトで、 **[ナレッジ ベースの編集]** ページを選択して既存の質問と回答のペアを表示します (複数のヒントが表示されている場合は、それを読み、 **[了解]** をクリックして閉じるか、 **[すべてスキップ]** をクリックします)
+1. Language Studio の **[LearnFAQ]** プロジェクトで、 **[ナレッジ ベースの編集]** ページを選択して既存の質問と回答のペアを表示します (複数のヒントが表示されている場合は、それを読み、 **[了解]** をクリックして閉じるか、 **[すべてスキップ]** をクリックします)
 2. ナレッジ ベースで、 **[&#65291; 質問のペアの追加]** を選択します。
-3. **[質問]** ボックスに「`What is Microsoft certification?`」と入力し、**Enter** キーを押します。
-4. **[&#65291; 代替フレージングの追加]** を選択し、「`How can I demonstrate my Microsoft technology skills?`」と入力して **Enter** キーを押します。
-5. **[回答]** ボックスに「`The Microsoft Certified Professional program enables you to validate and prove your skills with Microsoft technologies.`」と入力します。次に、**Enter** キーを押し、 **[送信]** をクリックして質問 (代替フレージングを含む) と回答をナレッジ ベースに追加します。
+3. **[質問]** ボックスに「`What is Microsoft certification?`」と入力し、**Enter**** キーを押します。
+4. **[&#65291; 代替語句の追加]** を選択し、「`How can I demonstrate my Microsoft technology skills?`」と入力して **Enter** キーを押します。
+5. **[回答]** ボックスに「`The Microsoft Certified Professional program enables you to validate and prove your skills with Microsoft technologies.`」と入力します。次に、 **[送信]** を押して質問 (代替フレージングを含む) と回答をナレッジ ベースに追加します。
 
     場合によっては、ユーザーが回答をフォローアップして、*複数ターン* 会話を作成できるようにすることが理にかなっています。ユーザーは、質問を繰り返し絞り込んで、必要な回答者にたどり着きます。
 
@@ -161,7 +161,7 @@ ms.locfileid: "139132297"
   - **[Application Insights]**: オフ
   - **[Microsoft アプリ ID とパスワード]**: アプリ ID とパスワードを自動作成します。
 3. ボットが作成されるまで待ちます。 次に、 **[リソースに移動]** をクリックします (または、ホーム ページで **[リソース グループ]** をクリックし、Web アプリ ボットを作成したリソース グループを開いてクリックします)。
-4. ボットのブレードで **[Test in Web Chat (Web チャットでのテスト)]** ページが表示され、ボットが「**こんにちは、ようこそ!** 」というメッセージを表示するまで待ちます。 (初期化には数秒かかることがあります)。
+4. ボットのブレードで **[Web チャットでのテスト]** ページが表示され、ボットが "**こんにちは、ようこそ!**" というメッセージを表示するまで待ちます (初期化には数秒かかることがあります)。
 5. テスト チャット インターフェイスを使用して、ボットがナレッジ ベースから期待どおりに質問に回答することを確認します。 たとえば、`What is Microsoft certification?` を送信してみます。
 
 ## <a name="more-information"></a>詳細情報
