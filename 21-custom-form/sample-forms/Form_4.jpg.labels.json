@@ -7,7 +7,7 @@
             "value": [
                 {
                     "page": 1,
-                    "text": "Hero",
+                    "text": "ヒーロー",
                     "boundingBoxes": [
                         [
                             0.3664705882352941,
@@ -23,7 +23,7 @@
                 },
                 {
                     "page": 1,
-                    "text": "Limited",
+                    "text": "制限あり",
                     "boundingBoxes": [
                         [
                             0.47705882352941176,
@@ -193,7 +193,7 @@
             "value": [
                 {
                     "page": 1,
-                    "text": "Yoga",
+                    "text": "ヨガ",
                     "boundingBoxes": [
                         [
                             0.2235294117647059,
@@ -209,7 +209,7 @@
                 },
                 {
                     "page": 1,
-                    "text": "for",
+                    "text": "対象",
                     "boundingBoxes": [
                         [
                             0.2635294117647059,
@@ -225,7 +225,7 @@
                 },
                 {
                     "page": 1,
-                    "text": "You",
+                    "text": "自分",
                     "boundingBoxes": [
                         [
                             0.28823529411764703,
@@ -295,7 +295,7 @@
                 },
                 {
                     "page": 1,
-                    "text": "Road",
+                    "text": "道路",
                     "boundingBoxes": [
                         [
                             0.26176470588235295,

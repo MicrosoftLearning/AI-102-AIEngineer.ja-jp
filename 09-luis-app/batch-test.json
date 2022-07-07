@@ -1,19 +1,18 @@
 [
     {
-        "text": "what time is it now?",
+        "text": "今は何時ですか?",
         "intent": "GetTime",
-        "entities":[]
+        "entities": []
     },
     {
-        "text": "what's the current time?",
+        "text": "現在時刻は何時ですか?",
         "intent": "GetTime",
-        "entities":[]
+        "entities": []
     },
     {
-        "text": "what is the time in Seattle?",
+        "text": "シアトルでの時間は何時ですか?",
         "intent": "GetTime",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Location",
                 "startPos": 20,
@@ -22,10 +21,9 @@
         ]
     },
     {
-        "text": "what time is it in Seattle?",
+        "text": "シアトルでは何時ですか?",
         "intent": "GetTime",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Location",
                 "startPos": 19,
@@ -34,10 +32,9 @@
         ]
     },
     {
-        "text": "what time is it in Los Angeles?",
+        "text": "ロサンゼルスでは何時ですか?",
         "intent": "GetTime",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Location",
                 "startPos": 19,
@@ -46,10 +43,9 @@
         ]
     },
     {
-        "text": "what time is it in San Francisco now?",
+        "text": "今、サンフランシスコでは何時ですか?",
         "intent": "GetTime",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Location",
                 "startPos": 19,
@@ -58,10 +54,9 @@
         ]
     },
     {
-        "text": "what time is it in Paris?",
+        "text": "パリでは何時ですか?",
         "intent": "GetTime",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Location",
                 "startPos": 19,
@@ -70,10 +65,9 @@
         ]
     },
     {
-        "text": "what is the current time in Delhi?",
+        "text": "デリーの現在時刻は何時ですか?",
         "intent": "GetTime",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Location",
                 "startPos": 28,
@@ -82,25 +76,24 @@
         ]
     },
     {
-        "text": "what day is it today?",
+        "text": "今日は何日ですか?",
         "intent": "GetDay",
-        "entities":[]
+        "entities": []
     },
     {
         "text": "what day is it?",
         "intent": "GetDay",
-        "entities":[]
+        "entities": []
     },
     {
-        "text": "what's the day?",
+        "text": "何日ですか?",
         "intent": "GetDay",
-        "entities":[]
+        "entities": []
     },
     {
-        "text": "what day is 12/12/2022?",
+        "text": "2022 年 12 月 12 日は何の日ですか?",
         "intent": "GetDay",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Date",
                 "startPos": 12,
@@ -109,15 +102,14 @@
         ]
     },
     {
-        "text": "what's the date?",
+        "text": "何日ですか?",
         "intent": "GetDate",
-        "entities":[]
+        "entities": []
     },
     {
-        "text": "what was the date on Monday?",
+        "text": "月曜は何日でしたか?",
         "intent": "GetDate",
-        "entities":
-        [
+        "entities": [
             {
                 "entity": "Weekday",
                 "startPos": 21,
@@ -128,6 +120,6 @@
     {
         "text": "Hello!",
         "intent": "None",
-        "entities":[]
+        "entities": []
     }
-  ]
+]

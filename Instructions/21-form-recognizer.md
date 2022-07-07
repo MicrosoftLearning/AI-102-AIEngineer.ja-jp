@@ -2,12 +2,12 @@
 lab:
   title: Forms からのデータの抽出
   module: Module 11 - Reading Text in Images and Documents
-ms.openlocfilehash: 3439c9d2d53fd0461b2fe35b095ea86d5ed3abaa
-ms.sourcegitcommit: da2617566698e889ff53426e6ddb58f42ccf9504
+ms.openlocfilehash: 540fdc49b9efcf335d43cdd7a6db405c255cd058
+ms.sourcegitcommit: de1f38bbe53ec209b42cd89516813773e2f3479b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "144776173"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "145040703"
 ---
 # <a name="extract-data-from-forms"></a>Forms からのデータの抽出 
 
@@ -196,18 +196,32 @@ pip install azure-ai-formrecognizer==3.0.0
 
 *以前に pip を使用してパッケージを Python 環境にインストールしたことがある場合、これは厳密には必要ありません。しかし、それがインストールされていることを確認しても害はありません。*
 
-4. **test-model** フォルダーで、構成ファイル (言語設定に応じて **appsettings.json** または **.env**) を編集して、次の値を追加します。
+4. **test-model** フォルダーの同じターミナルに、Tabulate ライブラリをインストールします。 これにより、テーブルに出力されます。
+
+**C#**
+
+```
+Install-Package Tabulate.NET -Version 1.0.5
+```
+
+**Python**
+
+```
+pip install tabulate
+```
+
+5. **test-model** フォルダーで、構成ファイル (言語設定に応じて **appsettings.json** または **.env**) を編集して、次の値を追加します。
     - Form Recognizer エンドポイント。
     - Form Recognizer キー。
     - モデルのトレーニング時に生成されたモデル ID (これは、ターミナルを **train-model** フォルダーの **cmd** コンソールに戻すことで確認できます)。 変更内容を **保存** します。
 
-5. **test-model** フォルダーで、クライアント アプリケーションのコード ファイル (C# の場合は *Program.cs*、Python の場合は *test-model.py*) を開き、含まれているコードを確認して、次の詳細に注意してください。
+6. **test-model** フォルダーで、クライアント アプリケーションのコード ファイル (C# の場合は *Program.cs*、Python の場合は *test-model.py*) を開き、含まれているコードを確認して、次の詳細に注意してください。
     - インストールしたパッケージの名前空間インポートされます
     - **Main** 関数は構成設定を取得し、キーとエンドポイントを使用して認証済みの **Client** を作成します。
     - 次に、クライアントを使用して、**test1.jpg** 画像からフォーム フィールドと値を抽出します。
     
 
-6. **test-model** フォルダーの統合ターミナルに戻り、次のコマンドを入力してプログラムを実行します。
+7. **test-model** フォルダーの統合ターミナルに戻り、次のコマンドを入力してプログラムを実行します。
 
 **C#**
 
@@ -221,7 +235,7 @@ dotnet run
 python test-model.py
 ```
     
-7. 出力を表示し、"CompanyPhoneNumber" や "DatedAs" などのフィールド名がモデルの出力に含まれる様子を観察します。   
+8. 出力を表示し、"CompanyPhoneNumber" や "DatedAs" などのフィールド名がモデルの出力に含まれる様子を観察します。   
 
 ## <a name="more-information"></a>詳細情報
 

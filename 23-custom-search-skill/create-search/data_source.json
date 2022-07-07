@@ -1,9 +1,11 @@
-{   
-    "name" : "margies-custom-data",  
-    "description" : "Documents for search.",  
-    "type" : "azureblob",
-    "credentials" :
-    { "connectionString" : "YOUR_CONNECTION_STRING"
-    },  
-    "container" : { "name" : "margies" }
-} 
+{
+    "name": "margies-custom-data",
+    "description": "検索対象のドキュメント。",
+    "type": "azureblob",
+    "credentials": {
+        "connectionString": "YOUR_CONNECTION_STRING"
+    },
+    "container": {
+        "name": "margies"
+    }
+}

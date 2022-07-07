@@ -82,7 +82,7 @@
                                     621,
                                     266
                                 ],
-                                "text": "Hero",
+                                "text": "ヒーロー",
                                 "confidence": 0.959
                             },
                             {
@@ -96,7 +96,7 @@
                                     811,
                                     266
                                 ],
-                                "text": "Limited",
+                                "text": "制限あり",
                                 "confidence": 0.959
                             }
                         ]
@@ -113,7 +113,7 @@
                             165,
                             379
                         ],
-                        "text": "Company Phone: 555-348-6512",
+                        "text": "会社の電話番号:555-348-6512",
                         "words": [
                             {
                                 "boundingBox": [
@@ -126,7 +126,7 @@
                                     167,
                                     379
                                 ],
-                                "text": "Company",
+                                "text": "[会社]",
                                 "confidence": 0.959
                             },
                             {
@@ -215,7 +215,7 @@
                             167,
                             418
                         ],
-                        "text": "Website: www.herolimited.com",
+                        "text": "Web サイト: www.herolimited.com",
                         "words": [
                             {
                                 "boundingBox": [
@@ -228,7 +228,7 @@
                                     167,
                                     418
                                 ],
-                                "text": "Website:",
+                                "text": "Web サイト:",
                                 "confidence": 0.959
                             },
                             {
@@ -259,7 +259,7 @@
                             164,
                             459
                         ],
-                        "text": "Email:",
+                        "text": "電子メール:",
                         "words": [
                             {
                                 "boundingBox": [
@@ -272,7 +272,7 @@
                                     165,
                                     459
                                 ],
-                                "text": "Email:",
+                                "text": "電子メール:",
                                 "confidence": 0.959
                             }
                         ]
@@ -289,7 +289,7 @@
                             1025,
                             449
                         ],
-                        "text": "Dated As: 02/10/2020",
+                        "text": "日付:02/10/2020",
                         "words": [
                             {
                                 "boundingBox": [
@@ -302,7 +302,7 @@
                                     1025,
                                     449
                                 ],
-                                "text": "Dated",
+                                "text": "日付",
                                 "confidence": 0.959
                             },
                             {
@@ -316,7 +316,7 @@
                                     1118,
                                     450
                                 ],
-                                "text": "As:",
+                                "text": "[As]:",
                                 "confidence": 0.958
                             },
                             {
@@ -377,7 +377,7 @@
                             1025,
                             489
                         ],
-                        "text": "Purchase Order #: 9328424",
+                        "text": "発注書 #:9328424",
                         "words": [
                             {
                                 "boundingBox": [
@@ -418,7 +418,7 @@
                                     1245,
                                     490
                                 ],
-                                "text": "#:",
+                                "text": "#<a name=\"\"></a>:",
                                 "confidence": 0.959
                             },
                             {
@@ -449,7 +449,7 @@
                             166,
                             594
                         ],
-                        "text": "Shipped To",
+                        "text": "発送先",
                         "words": [
                             {
                                 "boundingBox": [
@@ -476,7 +476,7 @@
                                     347,
                                     593
                                 ],
-                                "text": "To",
+                                "text": "終了",
                                 "confidence": 0.959
                             }
                         ]
@@ -493,7 +493,7 @@
                             160,
                             638
                         ],
-                        "text": "Vendor Name: Tish Williams",
+                        "text": "ベンダー名:Tish Williams",
                         "words": [
                             {
                                 "boundingBox": [
@@ -506,7 +506,7 @@
                                     160,
                                     638
                                 ],
-                                "text": "Vendor",
+                                "text": "ベンダー",
                                 "confidence": 0.957
                             },
                             {
@@ -520,7 +520,7 @@
                                     261,
                                     639
                                 ],
-                                "text": "Name:",
+                                "text": "名前:",
                                 "confidence": 0.958
                             },
                             {
@@ -565,7 +565,7 @@
                             160,
                             679
                         ],
-                        "text": "Company Name: Tish's Wishes",
+                        "text": "会社名:Tish's Wishes",
                         "words": [
                             {
                                 "boundingBox": [
@@ -578,7 +578,7 @@
                                     160,
                                     679
                                 ],
-                                "text": "Company",
+                                "text": "[会社]",
                                 "confidence": 0.958
                             },
                             {
@@ -592,7 +592,7 @@
                                     288,
                                     679
                                 ],
-                                "text": "Name:",
+                                "text": "名前:",
                                 "confidence": 0.959
                             },
                             {
@@ -637,7 +637,7 @@
                             161,
                             713
                         ],
-                        "text": "Address: 932 N Cantaloupe Road",
+                        "text": "住所:932 N Cantaloupe Road",
                         "words": [
                             {
                                 "boundingBox": [
@@ -706,7 +706,7 @@
                                     505,
                                     714
                                 ],
-                                "text": "Road",
+                                "text": "道路",
                                 "confidence": 0.959
                             }
                         ]
@@ -781,7 +781,7 @@
                             759,
                             749
                         ],
-                        "text": "Phone: 323-245-2943",
+                        "text": "Phone:323-245-2943",
                         "words": [
                             {
                                 "boundingBox": [
@@ -825,7 +825,7 @@
                             165,
                             830
                         ],
-                        "text": "Shipped From",
+                        "text": "発送元",
                         "words": [
                             {
                                 "boundingBox": [
@@ -852,7 +852,7 @@
                                     342,
                                     828
                                 ],
-                                "text": "From",
+                                "text": "ソース",
                                 "confidence": 0.959
                             }
                         ]
@@ -869,7 +869,7 @@
                             165,
                             882
                         ],
-                        "text": "Name: Larry Longshore",
+                        "text": "名前: Larry Longshore",
                         "words": [
                             {
                                 "boundingBox": [
@@ -882,7 +882,7 @@
                                     165,
                                     882
                                 ],
-                                "text": "Name:",
+                                "text": "名前:",
                                 "confidence": 0.958
                             },
                             {
@@ -927,7 +927,7 @@
                             164,
                             920
                         ],
-                        "text": "Company Name: Longshore Supply",
+                        "text": "会社名:Longshore Supply",
                         "words": [
                             {
                                 "boundingBox": [
@@ -940,7 +940,7 @@
                                     166,
                                     919
                                 ],
-                                "text": "Company",
+                                "text": "[会社]",
                                 "confidence": 0.959
                             },
                             {
@@ -954,7 +954,7 @@
                                     291,
                                     920
                                 ],
-                                "text": "Name:",
+                                "text": "名前:",
                                 "confidence": 0.958
                             },
                             {
@@ -982,7 +982,7 @@
                                     519,
                                     921
                                 ],
-                                "text": "Supply",
+                                "text": "供給",
                                 "confidence": 0.946
                             }
                         ]
@@ -999,7 +999,7 @@
                             166,
                             953
                         ],
-                        "text": "Address: 382 N Cool Road",
+                        "text": "住所:382 N Cool Road",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1054,7 +1054,7 @@
                                     361,
                                     954
                                 ],
-                                "text": "Cool",
+                                "text": "クール",
                                 "confidence": 0.932
                             },
                             {
@@ -1068,7 +1068,7 @@
                                     424,
                                     954
                                 ],
-                                "text": "Road",
+                                "text": "道路",
                                 "confidence": 0.959
                             }
                         ]
@@ -1098,7 +1098,7 @@
                                     285,
                                     991
                                 ],
-                                "text": "Bellevue",
+                                "text": "ベルビュー",
                                 "confidence": 0.958
                             },
                             {
@@ -1143,7 +1143,7 @@
                             758,
                             991
                         ],
-                        "text": "Phone: 938-242-4924",
+                        "text": "Phone:938-242-4924",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1187,7 +1187,7 @@
                             446,
                             1080
                         ],
-                        "text": "Details",
+                        "text": "詳細",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1200,7 +1200,7 @@
                                     447,
                                     1079
                                 ],
-                                "text": "Details",
+                                "text": "詳細",
                                 "confidence": 0.938
                             }
                         ]
@@ -1260,7 +1260,7 @@
                                     1114,
                                     1077
                                 ],
-                                "text": "Unit",
+                                "text": "ユニット",
                                 "confidence": 0.959
                             },
                             {
@@ -1274,7 +1274,7 @@
                                     1190,
                                     1078
                                 ],
-                                "text": "Price",
+                                "text": "価格",
                                 "confidence": 0.958
                             }
                         ]
@@ -1291,7 +1291,7 @@
                             1384,
                             1077
                         ],
-                        "text": "Total",
+                        "text": "合計",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1304,7 +1304,7 @@
                                     1387,
                                     1077
                                 ],
-                                "text": "Total",
+                                "text": "合計",
                                 "confidence": 0.959
                             }
                         ]
@@ -1321,7 +1321,7 @@
                             170,
                             1122
                         ],
-                        "text": "Party Favor purple",
+                        "text": "パーティー記念品 紫",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1348,7 +1348,7 @@
                                     243,
                                     1123
                                 ],
-                                "text": "Favor",
+                                "text": "記念品",
                                 "confidence": 0.959
                             },
                             {
@@ -1469,7 +1469,7 @@
                             170,
                             1163
                         ],
-                        "text": "Party Hat Blue",
+                        "text": "パーティ帽子 青",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1496,7 +1496,7 @@
                                     243,
                                     1163
                                 ],
-                                "text": "Hat",
+                                "text": "帽子",
                                 "confidence": 0.958
                             },
                             {
@@ -1510,7 +1510,7 @@
                                     294,
                                     1163
                                 ],
-                                "text": "Blue",
+                                "text": "青",
                                 "confidence": 0.927
                             }
                         ]
@@ -1617,7 +1617,7 @@
                             170,
                             1208
                         ],
-                        "text": "Party Cloth White",
+                        "text": "パーティ布 白",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1644,7 +1644,7 @@
                                     244,
                                     1207
                                 ],
-                                "text": "Cloth",
+                                "text": "布",
                                 "confidence": 0.959
                             },
                             {
@@ -1765,7 +1765,7 @@
                             171,
                             1251
                         ],
-                        "text": "Party Maraca White",
+                        "text": "パーティー マラカス 白",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1792,7 +1792,7 @@
                                     244,
                                     1251
                                 ],
-                                "text": "Maraca",
+                                "text": "マラカス",
                                 "confidence": 0.959
                             },
                             {
@@ -1913,7 +1913,7 @@
                             1148,
                             1599
                         ],
-                        "text": "SUBTOTAL",
+                        "text": "小計",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1926,7 +1926,7 @@
                                     1149,
                                     1600
                                 ],
-                                "text": "SUBTOTAL",
+                                "text": "小計",
                                 "confidence": 0.959
                             }
                         ]
@@ -1973,7 +1973,7 @@
                             1237,
                             1642
                         ],
-                        "text": "TAX",
+                        "text": "税",
                         "words": [
                             {
                                 "boundingBox": [
@@ -1986,7 +1986,7 @@
                                     1241,
                                     1642
                                 ],
-                                "text": "TAX",
+                                "text": "税",
                                 "confidence": 0.958
                             }
                         ]
@@ -2077,7 +2077,7 @@
                             1204,
                             1699
                         ],
-                        "text": "TOTAL",
+                        "text": "合計",
                         "words": [
                             {
                                 "boundingBox": [
@@ -2090,7 +2090,7 @@
                                     1207,
                                     1699
                                 ],
-                                "text": "TOTAL",
+                                "text": "合計",
                                 "confidence": 0.959
                             }
                         ]
@@ -2181,7 +2181,7 @@
                             526,
                             1778
                         ],
-                        "text": "Shipping Manager",
+                        "text": "発送管理者",
                         "words": [
                             {
                                 "boundingBox": [
@@ -2194,7 +2194,7 @@
                                     526,
                                     1778
                                 ],
-                                "text": "Shipping",
+                                "text": "発送",
                                 "confidence": 0.958
                             },
                             {
@@ -2208,7 +2208,7 @@
                                     630,
                                     1779
                                 ],
-                                "text": "Manager",
+                                "text": "管理者",
                                 "confidence": 0.959
                             }
                         ]
@@ -2225,7 +2225,7 @@
                             173,
                             1830
                         ],
-                        "text": "Additional Notes:",
+                        "text": "追加情報:",
                         "words": [
                             {
                                 "boundingBox": [
@@ -2238,7 +2238,7 @@
                                     174,
                                     1830
                                 ],
-                                "text": "Additional",
+                                "text": "その他",
                                 "confidence": 0.959
                             },
                             {
@@ -2252,7 +2252,7 @@
                                     364,
                                     1833
                                 ],
-                                "text": "Notes:",
+                                "text": "メモ:",
                                 "confidence": 0.908
                             }
                         ]
@@ -2269,7 +2269,7 @@
                             175,
                             1914
                         ],
-                        "text": "Unpack Carefully. Enjoy. Longshore Supply wishes you a happy party and is always here for",
+                        "text": "慎重に開梱してください。 お楽しみください。 Longshore Supply は、いつも幸せなパーティを願っています",
                         "words": [
                             {
                                 "boundingBox": [
@@ -2282,7 +2282,7 @@
                                     175,
                                     1909
                                 ],
-                                "text": "Unpack",
+                                "text": "開梱",
                                 "confidence": 0.959
                             },
                             {
@@ -2296,7 +2296,7 @@
                                     273,
                                     1911
                                 ],
-                                "text": "Carefully.",
+                                "text": "慎重に。",
                                 "confidence": 0.849
                             },
                             {
@@ -2310,7 +2310,7 @@
                                     397,
                                     1912
                                 ],
-                                "text": "Enjoy.",
+                                "text": "お楽しみください。",
                                 "confidence": 0.958
                             },
                             {
@@ -2338,7 +2338,7 @@
                                     651,
                                     1915
                                 ],
-                                "text": "Supply",
+                                "text": "供給",
                                 "confidence": 0.944
                             },
                             {
@@ -2352,7 +2352,7 @@
                                     759,
                                     1915
                                 ],
-                                "text": "wishes",
+                                "text": "願い",
                                 "confidence": 0.958
                             },
                             {
@@ -2366,7 +2366,7 @@
                                     869,
                                     1915
                                 ],
-                                "text": "you",
+                                "text": "方法",
                                 "confidence": 0.936
                             },
                             {
@@ -2394,7 +2394,7 @@
                                     960,
                                     1915
                                 ],
-                                "text": "happy",
+                                "text": "幸せな",
                                 "confidence": 0.959
                             },
                             {
@@ -2450,7 +2450,7 @@
                                     1243,
                                     1914
                                 ],
-                                "text": "always",
+                                "text": "常時",
                                 "confidence": 0.958
                             },
                             {
@@ -2464,7 +2464,7 @@
                                     1355,
                                     1913
                                 ],
-                                "text": "here",
+                                "text": "こちらを",
                                 "confidence": 0.959
                             },
                             {
@@ -2478,7 +2478,7 @@
                                     1431,
                                     1912
                                 ],
-                                "text": "for",
+                                "text": "対象",
                                 "confidence": 0.958
                             }
                         ]
@@ -2495,7 +2495,7 @@
                             172,
                             1959
                         ],
-                        "text": "for your party supply needs. For larger events and rentals please visit us at our affiliates",
+                        "text": "あなたのパーティーの供給のニーズのために。 大規模なイベントやレンタルについては、当社の関連会社にお問い合わせください",
                         "words": [
                             {
                                 "boundingBox": [
@@ -2508,7 +2508,7 @@
                                     173,
                                     1958
                                 ],
-                                "text": "for",
+                                "text": "対象",
                                 "confidence": 0.958
                             },
                             {
@@ -2522,7 +2522,7 @@
                                     221,
                                     1958
                                 ],
-                                "text": "your",
+                                "text": "あなたの",
                                 "confidence": 0.959
                             },
                             {
@@ -2550,7 +2550,7 @@
                                     377,
                                     1959
                                 ],
-                                "text": "supply",
+                                "text": "供給",
                                 "confidence": 0.959
                             },
                             {
@@ -2592,7 +2592,7 @@
                                     651,
                                     1959
                                 ],
-                                "text": "larger",
+                                "text": "より大きい",
                                 "confidence": 0.958
                             },
                             {
@@ -2634,7 +2634,7 @@
                                     919,
                                     1959
                                 ],
-                                "text": "rentals",
+                                "text": "レンタル数",
                                 "confidence": 0.959
                             },
                             {
@@ -2648,7 +2648,7 @@
                                     1030,
                                     1958
                                 ],
-                                "text": "please",
+                                "text": "どうぞ",
                                 "confidence": 0.958
                             },
                             {
@@ -2662,7 +2662,7 @@
                                     1137,
                                     1958
                                 ],
-                                "text": "visit",
+                                "text": "詳細については、",
                                 "confidence": 0.958
                             },
                             {
@@ -2704,7 +2704,7 @@
                                     1287,
                                     1956
                                 ],
-                                "text": "our",
+                                "text": "私たちの",
                                 "confidence": 0.958
                             },
                             {
@@ -2718,7 +2718,7 @@
                                     1343,
                                     1956
                                 ],
-                                "text": "affiliates",
+                                "text": "関連会社",
                                 "confidence": 0.938
                             }
                         ]
@@ -2735,7 +2735,7 @@
                             172,
                             1989
                         ],
-                        "text": "webpage:",
+                        "text": "Web ページ:",
                         "words": [
                             {
                                 "boundingBox": [
@@ -2748,7 +2748,7 @@
                                     173,
                                     1989
                                 ],
-                                "text": "webpage:",
+                                "text": "Web ページ:",
                                 "confidence": 0.933
                             }
                         ]
@@ -2797,7 +2797,7 @@
                             {
                                 "rowIndex": 0,
                                 "columnIndex": 0,
-                                "text": "Details",
+                                "text": "詳細",
                                 "boundingBox": [
                                     156,
                                     1038,
@@ -2852,7 +2852,7 @@
                             {
                                 "rowIndex": 0,
                                 "columnIndex": 3,
-                                "text": "Total",
+                                "text": "合計",
                                 "boundingBox": [
                                     1309,
                                     1038,
@@ -2870,7 +2870,7 @@
                             {
                                 "rowIndex": 1,
                                 "columnIndex": 0,
-                                "text": "Party Favor purple",
+                                "text": "パーティー記念品 紫",
                                 "boundingBox": [
                                     156,
                                     1087,
@@ -2944,7 +2944,7 @@
                             {
                                 "rowIndex": 2,
                                 "columnIndex": 0,
-                                "text": "Party Hat Blue",
+                                "text": "パーティ帽子 青",
                                 "boundingBox": [
                                     156,
                                     1128,
@@ -3018,7 +3018,7 @@
                             {
                                 "rowIndex": 3,
                                 "columnIndex": 0,
-                                "text": "Party Cloth White",
+                                "text": "パーティ布 白",
                                 "boundingBox": [
                                     156,
                                     1172,
@@ -3092,7 +3092,7 @@
                             {
                                 "rowIndex": 4,
                                 "columnIndex": 0,
-                                "text": "Party Maraca White",
+                                "text": "パーティー マラカス 白",
                                 "boundingBox": [
                                     156,
                                     1216,
@@ -3172,7 +3172,7 @@
                             {
                                 "rowIndex": 1,
                                 "columnIndex": 1,
-                                "text": "SUBTOTAL",
+                                "text": "小計",
                                 "boundingBox": [
                                     1072,
                                     1566,
@@ -3208,7 +3208,7 @@
                             {
                                 "rowIndex": 2,
                                 "columnIndex": 1,
-                                "text": "TAX",
+                                "text": "税",
                                 "boundingBox": [
                                     1072,
                                     1610,
@@ -3244,7 +3244,7 @@
                             {
                                 "rowIndex": 3,
                                 "columnIndex": 1,
-                                "text": "TOTAL",
+                                "text": "合計",
                                 "boundingBox": [
                                     1072,
                                     1658,

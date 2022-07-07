@@ -7,7 +7,7 @@
             "value": [
                 {
                     "page": 1,
-                    "text": "Hero",
+                    "text": "ヒーロー",
                     "boundingBoxes": [
                         [
                             0.3658823529411765,
@@ -23,7 +23,7 @@
                 },
                 {
                     "page": 1,
-                    "text": "Limited",
+                    "text": "制限あり",
                     "boundingBoxes": [
                         [
                             0.47705882352941176,
@@ -225,7 +225,7 @@
                 },
                 {
                     "page": 1,
-                    "text": "Books",
+                    "text": "書籍",
                     "boundingBoxes": [
                         [
                             0.3264705882352941,
@@ -295,7 +295,7 @@
                 },
                 {
                     "page": 1,
-                    "text": "Road",
+                    "text": "道路",
                     "boundingBoxes": [
                         [
                             0.27176470588235296,
