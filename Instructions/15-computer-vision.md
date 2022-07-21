@@ -2,12 +2,12 @@
 lab:
   title: Computer Vision を使用する画像の分析
   module: Module 8 - Getting Started with Computer Vision
-ms.openlocfilehash: 5b7f15550844e4bc5efbdb3b8ee00d71760f18c9
-ms.sourcegitcommit: d6da3bcb25d1cff0edacd759e75b7608a4694f03
+ms.openlocfilehash: f2ee18ff682d53e9fd554749ed2b9cbaa9b03611
+ms.sourcegitcommit: 7191e53bc33cda92e710d957dde4478ee2496660
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "137819366"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147041668"
 ---
 # <a name="analyze-images-with-computer-vision"></a>Computer Vision を使用する画像の分析
 
@@ -18,11 +18,11 @@ Computer Vision は、ソフトウェアシステムが画像を分析するこ�
 このラボで作業している環境に **AI-102-AIEngineer** コードのリポジトリをまだクローンしていない場合は、次の手順に従ってクローンします。 それ以外の場合は、複製されたフォルダーを Visual Studio Code で開きます。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
+2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
-    > **注**: ビルドとデバッグに必要なアセットを追加するように求めるダイアログが表示された場合は、 **[今はしない]** を選択します。
+    > **注**: ビルドとデバッグに必要なアセットを追加するように求めるプロンプトが表示された場合は、**[今はしない]** を選択します。
 
 ## <a name="provision-a-cognitive-services-resource"></a>Cognitive Services リソースをプロビジョニングする
 
@@ -31,13 +31,13 @@ Computer Vision は、ソフトウェアシステムが画像を分析するこ�
 1. Azure portal (`https://portal.azure.com`) を開き、ご利用の Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
 2. **[&#65291;リソースの作成]** ボタンを選択し、*Cognitive Services* を検索して、次の設定で **Cognitive Services** リソースを作成します。
     - **[サブスクリプション]**:"*ご自身の Azure サブスクリプション*"
-    - **[リソース グループ]** : "*リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がない可能性があります - 提供されているものを使用してください)* "
+    - **リソース グループ**: *リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がないことがあります。提供されているものを使ってください)*
     - **[リージョン]**: 使用できるリージョンを選択します
     - **[名前]**: *一意の名前を入力します*
     - **価格レベル**: Standard S0
 3. 必要なチェック ボックスをオンにして、リソースを作成します。
 4. デプロイが完了するまで待ち、デプロイの詳細を表示します。
-5. リソースがデプロイされたら、そこに移動して、その **[キーとエンドポイント]** ページを表示します。 次の手順では、このページのエンドポイントとキーの 1 つが必要になります。
+5. リソースがデプロイされたら、そこに移動して、その **キーとエンドポイント** のページを表示します。 次の手順では、このページのエンドポイントとキーの 1 つが必要になります。
 
 ## <a name="prepare-to-use-the-computer-vision-sdk"></a>Computer Vision SDKを使用する準備をする
 
@@ -61,16 +61,16 @@ pip install azure-cognitiveservices-vision-computervision==0.7.0
 ```
     
 3. **image-analysis** フォルダーの内容を表示し、構成設定用のファイルが含まれていることに注意してください。
-    - **C#** : appsettings.json
+    - **C#**: appsettings.json
     - **Python**: .env
 
     構成ファイルを開き、含まれている構成値を更新して、Cognitive Services リソースの **エンドポイント** と認証 **キー** を反映します。 変更を保存します。
 4. **image-analysis** フォルダーには、クライアント アプリケーションのコード ファイルが含まれていることに注意してください。
 
-    - **C#** : Program.cs
+    - **C#**: Program.cs
     - **Python**: image-analysis.py
 
-    コード ファイルを開き、上部の既存の名前空間参照の下で、「**Import namespaces**」というコメントを見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision SDK を使用するために必要な名前空間をインポートします
+    コード ファイルを開き、上部の既存の名前空間参照の下で、"**Import namespaces**" というコメントを見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision SDK を使用するために必要な名前空間をインポートします
 
 **C#**
 
@@ -100,7 +100,7 @@ from msrest.authentication import CognitiveServicesCredentials
 
 これで、SDK を使用して Computer Vision サービスを呼び出す準備が整いました。
 
-1. クライアント アプリケーションのコード ファイル (**Program.cs** または **image-analysis.py**) の **Main** 関数で、構成設定をロードするためのコードが提供されていることに注意してください。 次に、コメント「**Authenticate Computer Vision client**」を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision クライアント オブジェクトを作成および認証します
+1. クライアント アプリケーションのコード ファイル (**Program.cs** または **image-analysis.py**) の **Main** 関数で、構成設定をロードするためのコードが提供されていることに注意してください。 次に、コメント "**Authenticate Computer Vision client**" を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision クライアント オブジェクトを作成および認証します
 
 **C#**
 
@@ -123,7 +123,7 @@ cv_client = ComputerVisionClient(cog_endpoint, credential)
 
 2. **Main** 関数で、追加したコードの下で、コードが画像ファイルへのパスを指定し、画像パスを他の 2 つの関数 (**AnalyzeImage** と **GetThumbnail**) に渡すことに注意してください。 これらの関数はまだ完全には実装されていません。
 
-3. **AnalyzeImage** 関数のコメント **「Specify features to be retrieved」** の下に、次のコードを追加します。
+3. **AnalyzeImage** 関数のコメント "**Specify features to be retrieved**" の下に、次のコードを追加します。
 
 **C#**
 
@@ -152,7 +152,7 @@ features = [VisualFeatureTypes.description,
             VisualFeatureTypes.adult]
 ```
     
-4. **AnalyzeImage** 関数のコメント **「Get image analysis」** の下に、次のコードを追加します (後でコードを追加する場所を示すコメントを含む)。
+4. **AnalyzeImage** 関数のコメント "**Get image analysis**" の下に、次のコードを追加します (後でコードを追加する場所を示すコメントを含む)。
 
 **C#**
 
@@ -235,7 +235,7 @@ python image-analysis.py images/street.jpg
 
 画像の内容に関する手がかりを提供する関連 *タグ* を特定すると役立つ場合があります。
 
-1. **AnalyzeImage** 関数のコメント **「Get image tags」** の下に、次のコードを追加します。
+1. **AnalyzeImage** 関数のコメント "**Get image tags**" の下に、次のコードを追加します。
 
 **C#**
 
@@ -265,16 +265,15 @@ if (len(analysis.tags) > 0):
 
 ## <a name="get-image-categories"></a>Get image categories
 
-Computer Vision サービスは、画像の *カテゴリ* を提案でき、各カテゴリ内で有名なランドマークや有名人を識別できます。
+Computer Vision サービスは、画像の *"カテゴリ"* を提案でき、各カテゴリ内で有名なランドマークを識別できます。
 
-1. **AnalyzeImage** 関数のコメント **「Get image categories (including celebrities and landmarks)」** の下に、次のコードを追加します。
+1. **AnalyzeImage** 関数のコメント "**Get image categories**" の下に、次のコードを追加します。
 
 **C#**
 
 ```C
-// Get image categories (including celebrities and landmarks)
+// Get image categories
 List<LandmarksModel> landmarks = new List<LandmarksModel> {};
-List<CelebritiesModel> celebrities = new List<CelebritiesModel> {};
 Console.WriteLine("Categories:");
 foreach (var category in analysis.Categories)
 {
@@ -292,18 +291,6 @@ foreach (var category in analysis.Categories)
             }
         }
     }
-
-    // Get celebrities in this category
-    if (category.Detail?.Celebrities != null)
-    {
-        foreach (CelebritiesModel celebrity in category.Detail.Celebrities)
-        {
-            if (!celebrities.Any(item => item.Name == celebrity.Name))
-            {
-                celebrities.Add(celebrity);
-            }
-        }
-    }
 }
 
 // If there were landmarks, list them
@@ -316,25 +303,15 @@ if (landmarks.Count > 0)
     }
 }
 
-// If there were celebrities, list them
-if (celebrities.Count > 0)
-{
-    Console.WriteLine("Celebrities:");
-    foreach(CelebritiesModel celebrity in celebrities)
-    {
-        Console.WriteLine($" -{celebrity.Name} (confidence: {celebrity.Confidence.ToString("P")})");
-    }
-}
 ```
 
 **Python**
 
 ```Python
-# Get image categories (including celebrities and landmarks)
+# Get image categories
 if (len(analysis.categories) > 0):
     print("Categories:")
     landmarks = []
-    celebrities = []
     for category in analysis.categories:
         # Print the category
         print(" -'{}' (confidence: {:.2f}%)".format(category.name, category.score * 100))
@@ -345,33 +322,21 @@ if (len(analysis.categories) > 0):
                     if landmark not in landmarks:
                         landmarks.append(landmark)
 
-            # Get celebrities in this category
-            if category.detail.celebrities:
-                for celebrity in category.detail.celebrities:
-                    if celebrity not in celebrities:
-                        celebrities.append(celebrity)
-
     # If there were landmarks, list them
     if len(landmarks) > 0:
         print("Landmarks:")
         for landmark in landmarks:
             print(" -'{}' (confidence: {:.2f}%)".format(landmark.name, landmark.confidence * 100))
 
-    # If there were celebrities, list them
-    if len(celebrities) > 0:
-        print("Celebrities:")
-        for celebrity in celebrities:
-            print(" -'{}' (confidence: {:.2f}%)".format(celebrity.name, celebrity.confidence * 100))
-
 ```
     
-2. 変更を保存し、**images** フォルダー内の画像ファイルごとにプログラムを 1 回実行し、画像のキャプションとタグに加えて、推奨されるカテゴリのリストが、認識されているランドマークや有名人 (特に **building.jpg** と **person.jpg** の画像) とともに表示されることを確認します。
+2. 変更を保存し、**images** フォルダー内の画像ファイルごとにプログラムを 1 回実行し、画像のキャプションとタグに加えて、推奨されるカテゴリのリストが、認識されているランドマーク (具体的には **building.jpg** の画像) とともに表示されることを確認します。
 
 ## <a name="get-brands-in-an-image"></a>画像でブランドを取得する
 
 一部のブランドは、ブランド名が表示されていなくても、ロゴから視覚的に認識できます。 Computer Vision サービスは、何千もの有名なブランドを特定するためにトレーニングされています。
 
-1. **AnalyzeImage** 関数で、コメント「**Get brands in the image**」下に、次のコードを追加します。
+1. **AnalyzeImage** 関数で、コメント "**Get brands in the image**" 下に、次のコードを追加します。
 
 **C#**
 
@@ -403,7 +368,7 @@ if (len(analysis.brands) > 0):
 
 *物体検出* は、画像内の個々のオブジェクトが識別され、その場所が境界ボックスで示される特定の形式の Computer Vision です。
 
-1. **AnalyzeImage** 関数のコメント **「Get objects in the image」** の下に、次のコードを追加します。
+1. **AnalyzeImage** 関数のコメント "**Get objects in the image**" の下に、次のコードを追加します。
 
 **C#**
 
@@ -474,7 +439,7 @@ if len(analysis.objects) > 0:
 
 一部の画像はすべての視聴者に適しているとは限らないため、成人向けまたは暴力的な性質の画像を特定するためにモデレートを適用する必要がある場合があります。
 
-1. **AnalyzeImage** 関数のコメント **「Get moderation ratings」** の下に、次のコードを追加します。
+1. **AnalyzeImage** 関数のコメント "**Get moderation ratings**" の下に、次のコードを追加します。
 
 **C#**
 
@@ -502,7 +467,7 @@ print(ratings)
 
 場合によっては、*サムネイル* という名前の画像の小さいバージョンを作成し、それをトリミングして、新しい画像の寸法内に主要な視覚的主題を含める必要があります。
 
-1. コード ファイルで、**GetThumbnail** 関数を見つけます。コメント **「Generate a thumbnail」** の下に、次のコードを追加します。
+1. コード ファイルで、**GetThumbnail** 関数を見つけます。コメント "**Generate a thumbnail**" の下に、次のコードを追加します。
 
 **C#**
 
