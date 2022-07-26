@@ -2,12 +2,12 @@
 lab:
   title: Forms からのデータの抽出
   module: Module 11 - Reading Text in Images and Documents
-ms.openlocfilehash: 540fdc49b9efcf335d43cdd7a6db405c255cd058
-ms.sourcegitcommit: de1f38bbe53ec209b42cd89516813773e2f3479b
+ms.openlocfilehash: 96d47db5b1db0b4d87b5c7acd267493487584c41
+ms.sourcegitcommit: 94c8705b76b644d0fb0cd6df1b78ff63d5869109
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "145040703"
+ms.lasthandoff: 07/26/2022
+ms.locfileid: "147406488"
 ---
 # <a name="extract-data-from-forms"></a>Forms からのデータの抽出 
 
@@ -20,7 +20,7 @@ ms.locfileid: "145040703"
 まだ行っていない場合は、このコースのコード リポジトリを複製する必要があります。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
+2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
@@ -34,7 +34,7 @@ Form Recognizer サービスを使用するには、Azure サブスクリプシ�
 
 2. **[&#65291;リソースの作成]** ボタンを選択し、*Form Recognizer* を検索して、次の設定で **Form Recognizer** リソースを作成します。
     - **[サブスクリプション]**:"*ご自身の Azure サブスクリプション*"
-    - **[リソース グループ]** : "*リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がない可能性があります - 提供されているものを使用してください)* "
+    - **リソース グループ**: *リソース グループを選択または作成します (制限付きサブスクリプションを使用している場合は、新しいリソース グループを作成する権限がないことがあります。提供されているものを使ってください)*
     - **[リージョン]**: 使用できるリージョンを選択します
     - **[名前]**: *一意の名前を入力します*
     - **[価格レベル]**: F0
@@ -201,7 +201,7 @@ pip install azure-ai-formrecognizer==3.0.0
 **C#**
 
 ```
-Install-Package Tabulate.NET -Version 1.0.5
+dotnet add package Tabulate.NET --version 1.0.5
 ```
 
 **Python**
