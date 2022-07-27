@@ -2,29 +2,29 @@
 lab:
   title: 顔の検出と分析
   module: Module 10 - Detecting, Analyzing, and Recognizing Faces
-ms.openlocfilehash: ac73112414f9e0e4f944029dbfb1f5df0f204f28
-ms.sourcegitcommit: f19509304dff38600d6431f4873e0d580fb51425
+ms.openlocfilehash: 4f7f366d7f2fb221d4fcb89fdb3a4b21c88b915f
+ms.sourcegitcommit: 3de3c160e5b2eae51308cacbd0bcd3dbdbe337a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "147124835"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "147375793"
 ---
 # <a name="detect-and-analyze-faces"></a>顔の検出と分析
 
 人間の顔を検出して分析する機能は、AI のコア機能です。 この演習では、画像内の顔を操作するために使用できる 2 つの Azure Cognitive Services である **Computer Vision** サービスと **Face** サービスについて説明します。
 
-> **注**:2022 年 6 月 21 日から、個人を特定できる情報を返すコグニティブ サービスの機能は、[制限付きアクセス](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-limited-access)が許可されているお客様に限定されます。 さらに、感情的な状態を推測する機能は使用できなくなりました。 これらの制限は、このラボの演習に影響する可能性があります。 この問題に対処していますが、その間、次の手順に従うとエラーが発生する可能性があります。申し訳ございません。 Microsoft が行った変更と理由について詳しくは、「[顔認識に対する責任ある AI 投資と保護](https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/)」をご覧ください。
+> **注**: 2022 年 6 月 21 日から、個人を特定できる情報を返すコグニティブ サービスの機能は、[制限付きアクセス](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-limited-access)が許可されているお客様に限定されます。 さらに、感情的な状態を推測する機能は使用できなくなりました。 これらの制限は、このラボの演習に影響する可能性があります。 この問題に対処していますが、その間、次の手順に従うとエラーが発生する可能性があります。申し訳ございません。 Microsoft が行った変更と理由について詳しくは、「[顔認識に対する責任ある AI 投資と保護](https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/)」をご覧ください。
 
 ## <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
 
 まだ行っていない場合は、このコースのコード リポジトリを複製する必要があります。
 
 1. Visual Studio Code を起動します。
-2. パレットを開き (Shift + Ctrl + P)、**Git: Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーにクローンします (どのフォルダーでも問題ありません)。
+2. パレットを開き (SHIFT+CTRL+P)、**Git:Clone** コマンドを実行して、`https://github.com/MicrosoftLearning/AI-102-AIEngineer` リポジトリをローカル フォルダーに複製します (どのフォルダーでも問題ありません)。
 3. リポジトリを複製したら、Visual Studio Code でフォルダーを開きます。
 4. リポジトリ内の C# コード プロジェクトをサポートするために追加のファイルがインストールされるまで待ちます。
 
-    > **注**: ビルドとデバッグに必要なアセットを追加するように求めるプロンプトが表示された場合は、**[今はしない]** を選択します。
+    > **注**: ビルドとデバッグに必要なアセットを追加するように求めるダイアログが表示された場合は、 **[今はしない]** を選択します。
 
 ## <a name="provision-a-cognitive-services-resource"></a>Cognitive Services リソースをプロビジョニングする
 
@@ -39,7 +39,7 @@ ms.locfileid: "147124835"
     - **価格レベル**: Standard S0
 3. 必要なチェック ボックスをオンにして、リソースを作成します。
 4. デプロイが完了するまで待ち、デプロイの詳細を表示します。
-5. リソースがデプロイされたら、そこに移動して、その **キーとエンドポイント** のページを表示します。 次の手順では、このページのエンドポイントとキーの 1 つが必要になります。
+5. リソースがデプロイされたら、そこに移動して、その **[キーとエンドポイント]** ページを表示します。 次の手順では、このページのエンドポイントとキーの 1 つが必要になります。
 
 ## <a name="prepare-to-use-the-computer-vision-sdk"></a>Computer Vision SDKを使用する準備をする
 
@@ -63,17 +63,17 @@ ms.locfileid: "147124835"
     ```
     
 3. **computer-vision** フォルダーの内容を表示し、構成設定用のファイルが含まれていることを確認してください。
-    - **C#**: appsettings.json
+    - **C#** : appsettings.json
     - **Python**: .env
 
 4. 構成ファイルを開き、含まれている構成値を更新して、Cognitive Services リソースの **エンドポイント** と認証 **キー** を反映します。 変更を保存します。
 
 5. **computer-vision** フォルダーに、クライアント アプリケーションの次のコード ファイルが含まれていることを確認してください。
 
-    - **C#**: Program.cs
+    - **C#** : Program.cs
     - **Python**: detect-faces.py
 
-6. コード ファイルを開き、上部の既存の名前空間参照の下で、"**Import namespaces**" というコメントを見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision SDK を使用するために必要な名前空間をインポートします
+6. コード ファイルを開き、上部にある既存の名前空間参照の下で、コメント "**名前空間をインポートする**" を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision SDK を使用するために必要な名前空間をインポートします
 
     **C#**
 
@@ -103,7 +103,7 @@ ms.locfileid: "147124835"
 
 これで、SDK を使用して Computer Vision サービスを呼び出し、画像内の顔を検出する準備が整いました。
 
-1. クライアント アプリケーションのコード ファイル (**Program.cs** または **detect-faces.py**) の **Main** 関数で、構成設定をロードするためのコードが提供されていることを確認してください。 次に、コメント "**Authenticate Computer Vision client**" を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision クライアント オブジェクトを作成および認証します
+1. クライアント アプリケーションのコード ファイル (**Program.cs** または **detect-faces.py**) の **Main** 関数で、構成設定をロードするためのコードが提供されていることを確認してください。 次に、コメント "**Computer Vision クライアントを認証する**" を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision クライアント オブジェクトを作成および認証します
 
     **C#**
 
@@ -126,7 +126,7 @@ ms.locfileid: "147124835"
 
 2. **Main** 関数の、追加したコードの下で、コードが画像ファイルへのパスを指定し、**AnalyzeFaces** という名前の関数に画像パスを渡していることを確認してください。 この関数はまだ完全には実装されていません。
 
-3. **AnalyzeFaces** 関数のコメント "**Specify features to be retrieved (faces)**" の下に、次のコードを追加します。
+3. **AnalyzeFaces** 関数で、コメント "**取得する機能を指定する (顔)**" の下に、次のコードを追加します。
 
     **C#**
 
@@ -145,7 +145,7 @@ ms.locfileid: "147124835"
     features = [VisualFeatureTypes.faces]
     ```
 
-4. **AnalyzeFaces** 関数のコメント "**Get image analysis**" の下に、次のコードを追加します。
+4. **AnalyzeFaces** 関数で、コメント "**画像分析を取得する**" の下に、次のコードを追加します。
 
 **C#**
 
@@ -257,17 +257,17 @@ with open(image_file, mode="rb") as image_data:
     ```
     
 3. **face-api** フォルダーの内容を表示し、構成設定用のファイルが含まれていることを確認してください。
-    - **C#**: appsettings.json
+    - **C#** : appsettings.json
     - **Python**: .env
 
 4. 構成ファイルを開き、含まれている構成値を更新して、Cognitive Services リソースの **エンドポイント** と認証 **キー** を反映します。 変更を保存します。
 
 5. **face-api** フォルダーに、クライアント アプリケーションの次のコード ファイルが含まれていることを確認してください。
 
-    - **C#**: Program.cs
+    - **C#** : Program.cs
     - **Python**: analyze-faces.py
 
-6. コード ファイルを開き、上部の既存の名前空間参照の下で、"**Import namespaces**" というコメントを見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision SDK を使用するために必要な名前空間をインポートします
+6. コード ファイルを開き、上部にある既存の名前空間参照の下で、コメント "**名前空間をインポートする**" を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、Computer Vision SDK を使用するために必要な名前空間をインポートします
 
     **C#**
 
@@ -286,7 +286,7 @@ with open(image_file, mode="rb") as image_data:
     from msrest.authentication import CognitiveServicesCredentials
     ```
 
-7. **Main** 関数で、構成設定をロードするためのコードが提供されていることを確認してください。 次に、コメント "**Authenticate Face client**" を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、**FaceClient** オブジェクトを作成および認証します。
+7. **Main** 関数で、構成設定をロードするためのコードが提供されていることを確認してください。 次に、コメント "**Face クライアントを認証する**" を見つけます。 次に、このコメントの下に、次の言語固有のコードを追加して、**FaceClient** オブジェクトを作成および認証します。
 
     **C#**
 
@@ -314,7 +314,7 @@ with open(image_file, mode="rb") as image_data:
 Face サービスの最も基本的な機能の 1 つは、画像内の顔を検出し、頭部姿勢、ぼやけ、眼鏡の存在などの属性を決定することです。
 
 1. アプリケーションのコード ファイルの **Main** 関数で、ユーザーがメニュー オプション **1** を選択した場合に実行されるコードを調べます。 このコードは **DetectFaces** 関数を呼び出し、パスを画像ファイルに渡します。
-2. コード ファイルで **DetectFaces** 関数を見付け、コメント "**Specify facial features to be retrieved**" の下に、次のコードを追加します。
+2. コード ファイルで **DetectFaces** 関数を見つけて、コメント "**取得する顔機能を指定する**" の下に、次のコードを追加します。
 
     **C#**
 
@@ -337,7 +337,7 @@ Face サービスの最も基本的な機能の 1 つは、画像内の顔を検
                 FaceAttributeType.glasses]
     ```
 
-3. **DetectFaces** 関数で、追加したコードの下でコメント "**Get faces**" を見つけて、次のコードを追加します。
+3. **DetectFaces** 関数に追加したコードの下で、コメント "**顔を取得する**" を見つけて、次のコードを追加します。
 
 **C#**
 
@@ -345,7 +345,7 @@ Face サービスの最も基本的な機能の 1 つは、画像内の顔を検
 // Get faces
 using (var imageData = File.OpenRead(imageFile))
 {    
-    var detected_faces = await faceClient.Face.DetectWithStreamAsync(imageData, returnFaceAttributes: features);
+    var detected_faces = await faceClient.Face.DetectWithStreamAsync(imageData, returnFaceAttributes: features, returnFaceId: false);
 
     if (detected_faces.Count > 0)
     {
@@ -357,12 +357,15 @@ using (var imageData = File.OpenRead(imageFile))
         Pen pen = new Pen(Color.LightGreen, 3);
         Font font = new Font("Arial", 4);
         SolidBrush brush = new SolidBrush(Color.Black);
+        int faceCount=0;
 
         // Draw and annotate each face
         foreach (var face in detected_faces)
         {
+            faceCount++;
+            Console.WriteLine($"\nFace number {faceCount}");
+            
             // Get face properties
-            Console.WriteLine($"\nFace ID: {face.FaceId}");
             Console.WriteLine($" - Mouth Occluded: {face.FaceAttributes.Occlusion.MouthOccluded}");
             Console.WriteLine($" - Eye Occluded: {face.FaceAttributes.Occlusion.EyeOccluded}");
             Console.WriteLine($" - Blur: {face.FaceAttributes.Blur.BlurLevel}");
@@ -390,7 +393,7 @@ using (var imageData = File.OpenRead(imageFile))
 # Get faces
 with open(image_file, mode="rb") as image_data:
     detected_faces = face_client.face.detect_with_stream(image=image_data,
-                                                            return_face_attributes=features)
+                                                            return_face_attributes=features,                     return_face_id=False)
 
     if len(detected_faces) > 0:
         print(len(detected_faces), 'faces detected.')
@@ -401,12 +404,15 @@ with open(image_file, mode="rb") as image_data:
         image = Image.open(image_file)
         draw = ImageDraw.Draw(image)
         color = 'lightgreen'
+        face_count = 0
 
         # Draw and annotate each face
         for face in detected_faces:
 
             # Get face properties
-            print('\nFace ID: {}'.format(face.face_id))
+            face_count += 1
+            print('\nFace number {}'.format(face_count))
+
             detected_attributes = face.face_attributes.as_dict()
             if 'blur' in detected_attributes:
                 print(' - Blur:')
@@ -454,7 +460,7 @@ with open(image_file, mode="rb") as image_data:
     python analyze-faces.py
     ```
 
-6. プロンプトが表示されたら、「**1**」を入力し、出力を観察します。これには、検出された各顔の ID と属性が含まれている必要があります。
+6. プロンプトが表示されたら、「**1**」と入力し、出力を観察します。ここには、検出された各顔の ID と属性が含まれているはずです。
 7. コード ファイルと同じフォルダーに生成された **detected_faces.jpg** ファイルを表示して、注釈付きの顔を確認します。
 
 ## <a name="more-information"></a>詳細情報
